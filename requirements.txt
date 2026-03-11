@@ -1,0 +1,45 @@
+# TeacherManager requirements.txt
+# Synced with pyproject.toml via: poetry export --without-hashes -f requirements.txt
+# Generated for Python 3.12
+
+# Core FastAPI & Web
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+starlette==0.27.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+pydantic-core==2.14.5
+python-multipart==0.0.6
+
+# Database & Migrations
+sqlalchemy==2.0.23
+asyncpg==0.29.0
+alembic==1.13.0
+greenlet==3.0.1
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+cryptography==41.0.7
+bcrypt==4.1.1
+
+# PDF Generation
+weasyprint==60.1
+tinycss2==1.2.1
+fonttools==4.46.0
+
+# Caching & Sessions
+redis==5.0.1
+
+# APM & Monitoring
+sentry-sdk==1.39.1
+
+# Async & File Handling
+aiofiles==23.2.1
+httpx==0.25.2
+
+# Environment
+python-dotenv==1.0.0
+
+# Type Hints (optional, for IDE/mypy)
+typing-extensions==4.8.0
