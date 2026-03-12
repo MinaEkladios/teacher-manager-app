@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}Home - TeacherManager{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to TeacherManager</h1>
+        <p class="subtitle">Manage classroom attendance, student profiles, and schedules with ease.</p>
+        <p class="tagline">A secure, role-based PWA for teachers, administrators, parents, and students.</p>
+    </div>
+</section>
+
+<section class="features">
+    <h2>Core Features</h2>
+    <div class="feature-grid">
+        <article class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3>Attendance Tracking</h3>
+            <p>Mark attendance in real-time, edit records, and view history with ease.</p>
+        </article>
+        
+        <article class="feature-card">
+            <div class="feature-icon">👤</div>
+            <h3>Student Profiles</h3>
+            <p>Manage student information, enrollment dates, parent contacts, and more.</p>
+        </article>
+        
+        <article class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h3>Class Management</h3>
+            <p>Create and manage classes, schedules, and student enrollment.</p>
+        </article>
+        
+        <article class="feature-card">
+            <div class="feature-icon">🔔</div>
+            <h3>Smart Alerts</h3>
+            <p>Automatic notifications for excessive absences and important events.</p>
+        </article>
+        
+        <article class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Reports & Analytics</h3>
+            <p>Generate PDF reports and view dashboards with attendance analytics.</p>
+        </article>
+        
+        <article class="feature-card">
+            <div class="feature-icon">🔐</div>
+            <h3>Role-Based Access</h3>
+            <p>Admin, Teacher, Parent, and Student roles with fine-grained permissions.</p>
+        </article>
+    </div>
+</section>
+
+<section class="roles">
+    <h2>User Roles</h2>
+    <div class="roles-grid">
+        <div class="role-box">
+            <h3>👨‍💼 Admin</h3>
+            <ul>
+                <li>Manage users and schools</li>
+                <li>View system-wide reports</li>
+                <li>Configure settings</li>
+            </ul>
+        </div>
+        
+        <div class="role-box">
+            <h3>👨‍🏫 Teacher</h3>
+            <ul>
+                <li>Mark attendance</li>
+                <li>Manage student profiles</li>
+                <li>Generate class reports</li>
+            </ul>
+        </div>
+        
+        <div class="role-box">
+            <h3>👨‍👩‍👧 Parent</h3>
+            <ul>
+                <li>View child attendance</li>
+                <li>Receive absence alerts</li>
+                <li>Access reports</li>
+            </ul>
+        </div>
+        
+        <div class="role-box">
+            <h3>👨‍🎓 Student</h3>
+            <ul>
+                <li>View own attendance</li>
+                <li>Check schedule</li>
+                <li>View announcements</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Ready to Get Started?</h2>
+    <p>Log in to your account or contact your administrator for access.</p>
+    <a href="/login" class="btn-large">Login Now</a>
+</section>
+
+<section class="tech-stack">
+    <h2>Technology Stack</h2>
+    <ul class="tech-list">
+        <li><strong>Backend:</strong> FastAPI (Python 3.12) with async SQLAlchemy</li>
+        <li><strong>Frontend:</strong> Jinja2 templates + HTML5 + CSS3 + Service Workers (PWA)</li>
+        <li><strong>Database:</strong> PostgreSQL with Alembic migrations</li>
+        <li><strong>Caching:</strong> Redis for sessions and performance</li>
+        <li><strong>Auth:</strong> JWT tokens with RBAC (Role-Based Access Control)</li>
+        <li><strong>APM:</strong> Sentry for error tracking and monitoring</li>
+        <li><strong>Reports:</strong> WeasyPrint for PDF generation</li>
+    </ul>
+</section>
+
+<section class="status">
+    <h2>API Status</h2>
+    <p>Current deployment status and API health information:</p>
+    <div class="status-box">
+        <p><strong>Health Check:</strong> <a href="/health" target="_blank">/health</a></p>
+        <p><strong>API Documentation:</strong> <a href="/docs" target="_blank">/docs (Swagger UI)</a></p>
+        <p><strong>OpenAPI Schema:</strong> <a href="/openapi.json" target="_blank">/openapi.json</a></p>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Example: Basic offline ready message
+    document.addEventListener('DOMContentLoaded', () => {
+        if (navigator.onLine) {
+            console.log('App is online');
+        } else {
+            console.log('App is offline - PWA will serve cached content');
+        }
+    });
+</script>
+{% endblock %}

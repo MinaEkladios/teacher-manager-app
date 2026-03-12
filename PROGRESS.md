@@ -20,12 +20,12 @@
 - [x] P2B.2 — app/models, app/schemas, app/services with core ORM + Pydantic models
 
 ## Phase 2C — Migrations & Tests
-- [ ] P2C.1 — Alembic skeleton + initial migration
-- [ ] P2C.2 — tests/test_health.py, tests/test_auth.py
+- [x] P2C.1 — Alembic skeleton + initial migration (001_initial.py)
+- [x] P2C.2 — tests/test_health.py, tests/test_auth.py (basic assertions)
 
 ## Phase 3 — Frontend (Jinja2 + HTML5 + PWA)
-- [ ] P3.1 — templates/base.html, templates/index.html, static/css/style.css
-- [ ] P3.2 — PWA manifest + service worker
+- [x] P3.1 — templates/base.html, templates/index.html, static/css/style.css
+- [x] P3.2 — PWA manifest + service worker (offline sync, background sync, push notifications)
 
 ## Phase 4 — Integration, CI, APM
 - [ ] P4.1 — DB wiring guidance, Sentry integration

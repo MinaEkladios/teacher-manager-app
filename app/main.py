@@ -10,6 +10,10 @@ from contextlib import asynccontextmanager
 import sentry_sdk
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
+from fastapi import Request
 
 from app.api.routes import router as api_router
 from app.core.config import settings
@@ -55,6 +59,12 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
+    # Mount static files
+    app.mount("/static", StaticFiles(directory="static"), name="static")
+
+    # Setup Jinja2 templates
+    templates = Jinja2Templates(directory="templates")
+
     # Add CORS middleware
     app.add_middleware(
         CORSMiddleware,
@@ -77,15 +87,11 @@ def create_app() -> FastAPI:
             "environment": settings.app_env,
         }
 
-    # Root endpoint
-    @app.get("/", tags=["Root"])
-    async def root():
-        """Root endpoint."""
-        return {
-            "message": f"Welcome to {settings.app_name}",
-            "docs": "/docs",
-            "openapi": "/openapi.json",
-        }
+    # Root endpoint - serve home page template
+    @app.get("/", response_class=HTMLResponse, tags=["Pages"])
+    async def root(request: Request):
+        """Root endpoint - serves home page."""
+        return templates.TemplateResponse("index.html", {"request": request})
 
     return app
 
