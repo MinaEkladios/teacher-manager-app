@@ -28,8 +28,8 @@
 - [x] P3.2 — PWA manifest + service worker (offline sync, background sync, push notifications)
 
 ## Phase 4 — Integration, CI, APM
-- [ ] P4.1 — DB wiring guidance, Sentry integration
-- [ ] P4.2 — .github/workflows/ci.yml, integration test scaffolding
+- [x] P4.1 — DB wiring (async SQLAlchemy), Sentry configured, DEPLOYMENT.md
+- [x] P4.2 — .github/workflows/ci.yml, conftest.py (test fixtures, pytest config)
 
 ## Phase 5 — Production Prep
 - [ ] P5.1 — Dockerfile, docker-compose.yml

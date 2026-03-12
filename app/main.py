@@ -17,6 +17,7 @@ from fastapi import Request
 
 from app.api.routes import router as api_router
 from app.core.config import settings
+from app.core.database import init_db, close_db
 
 
 def init_sentry() -> None:
@@ -35,8 +36,10 @@ async def lifespan(app: FastAPI):
     """Manage app lifecycle: startup and shutdown."""
     # Startup
     print(f"Starting {settings.app_name} (env={settings.app_env})")
+    await init_db()
     yield
     # Shutdown
+    await close_db()
     print(f"Shutting down {settings.app_name}")
 
 
