@@ -1,5 +1,5 @@
 & "C:\Users\mina.ekladios\AppData\Local\Programs\Git\bin\git.exe" init
 & "C:\Users\mina.ekladios\AppData\Local\Programs\Git\bin\git.exe" add -A
-& "C:\Users\mina.ekladios\AppData\Local\Programs\Git\bin\git.exe" commit -m "P1.3: check script verified - all deps installed"
+& "C:\Users\mina.ekladios\AppData\Local\Programs\Git\bin\git.exe" commit -m "P2B.2: add ORM models, schemas, service stubs"
 & "C:\Users\mina.ekladios\AppData\Local\Programs\Git\bin\git.exe" push
 & "C:\Users\mina.ekladios\AppData\Local\Programs\Git\bin\git.exe" remote add origin https://github.com/MinaEkladios/teacher-manager-app.git
