@@ -16,8 +16,8 @@
 - [x] P2A.2 — All config keys already in .env.example (P1.1)
 
 ## Phase 2B — Routes & Authentication
-- [ ] P2B.1 — app/core/security.py, app/api/routes.py
-- [ ] P2B.2 — app/models/__init__.py, app/schemas/__init__.py, app/services/__init__.py
+- [x] P2B.1 — app/core/security.py, app/api/routes.py
+- [x] P2B.2 — app/models, app/schemas, app/services with core ORM + Pydantic models
 
 ## Phase 2C — Migrations & Tests
 - [ ] P2C.1 — Alembic skeleton + initial migration
